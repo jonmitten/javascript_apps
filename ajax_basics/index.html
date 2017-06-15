@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AJAX Basics</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <link href='//fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
+  <title>AJAX Tutorial</title>
+  <script>
+    /*
+        step 1
+        Create the XHR object
+    */
+    var xhr = new XMLHttpRequest();
+    /*
+        step 2
+        define a callback function
+    */
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4){
+            document.getElementById('ajax').innerHTML = xhr.responseText;
+        }
+    };
+    /*
+        step 3
+        open the request
+    */
+    xhr.open('GET', 'sidebar.html');
+    /*
+        step 4
+        send the request
+    */
+    xhr.send();
+  </script>
 </head>
 <body>
+  <div class="grid-container centered">
+    <div class="grid-100">
+      <div class="contained">
+        <div class="grid-100">
+          <div class="heading">
+            <h1>Bring on the AJAX</h1>
+          </div>
+          <div id="ajax">
 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
