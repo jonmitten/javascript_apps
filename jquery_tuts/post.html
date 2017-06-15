@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PUPPIES!</title>
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+  <header>
+  <nav class="container">
+    <h1 class="logo"><img src="img/logo.svg" /></h1>
+    <ul>
+      <li><a href="index.html">Adopt</a></li>
+      <li><a href="post.html">Post</a></li>
+    </ul>
+  </nav>
+  </header>
+  <h1>Post a Pet</h1>
+  <h2 class="page-header">List animals that need furever homes here!</h2>
+  <main class="container">
+    <form>
+      <div class="row">
+        <div class="six columns">
+          <label for="pet-name">Puppy Name</label>
+          <input class="u-full-width" placeholder="Scruffy McGuffagin" id="pet-name" type="text">
+        </div>
+        <div class="six columns">
+          <label for="pet-species">Species</label>
+          <select class="u-full-width" id="pet-species">
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+            <option value="Narwhal">Narwhal</option>
+          </select>
+        </div>
+      </div>
+      <label for="pet-notes">Notes</label>
+      <textarea class="u-full-width" placeholder="Plays well with…" id="pet-notes"></textarea>
+      <label>
+        <input type="checkbox" id="terms" value="terms">
+        <a id="terms-doc" target="_blank" href="terms.html">Read the Terms and Conditions</a>
+      </label>
+      <button type="button" id="add-pet">Add</button>
+    </form>
+    <div class="row" id="posted-pets">
+    </div>
+  </main>
+  <footer>
+    <p class="container">
+      Made with &lt;3 fur puppies by <a href="#">Aisha Blake</a>
+    </p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

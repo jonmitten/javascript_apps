@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>jQuery 3 Tutorials</title>
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -12,13 +13,18 @@
 
 </head>
 <body>
+<div class="container intro">
+
     <header class="navbar navbar-light navbar-tiggleable-md bd-navbar">
         <nav class="container">
-
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pets.html">Pets</a></li>
+            </ul>
         </nav>
         <!-- /.container -->
     </header>
-    <section class="container on-method">
+    <section id="one" class="container on-method">
         <h5>.on() method</h5>
         <p><a href="http://api.jquery.com/on/">.on()</a></p>
         <p>Click list items to trigger the .on('click') event.</p>
@@ -28,12 +34,12 @@
           <li>Thing 3</li>
         </ul>
     </section>
-    <section class="container attr-example">
+    <section id="two" class="container attr-example">
         <a href="https://www.google.com/">Go somewhere else!</a>
         <button>Change Destination</button>
     </section>
     <!-- /.container -->
-    <section class="container events">
+    <section id="three" class="container events">
         <h5>Things I enjoy</h5>
         <ul>
             <li>Raindrops on Roses</li>
@@ -43,7 +49,7 @@
             <li>These are a few of my favorite things</li>
         </ul>
     </section>
-    <section class="container callback-funcs">
+    <section id="four" class="container callback-funcs">
     <h5>Callback Methods</h5>
         <div class="referecences">
             <p>Examples of built-in functions that accept callback methods:</p>
@@ -65,6 +71,8 @@
         <!-- /.referecences -->
     </section>
     <!-- /.container callback-funcs -->
+</div>
+<!-- /.container intro -->
     <script src="/js/app.js"></script>
 </body>
 </html>
