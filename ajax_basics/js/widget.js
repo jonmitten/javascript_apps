@@ -22,3 +22,24 @@ xhr.onreadystatechange = function () {
 xhr.open('GET', 'data/employees.json');
 xhr.send();
 
+/* meeting rooms */
+let meetingRoomsXhr = new XMLHttpRequest();
+meetingRoomsXhr.onreadystatechange = function () {
+  if (meetingRoomsXhr.readyState === 4) {
+    let rooms = JSON.parse(meetingRoomsXhr.responseText);
+    let statusHTML = '<ul class="rooms">';
+    for (let i = 0; i < rooms.length; i++) {
+        if (rooms[i].available == true) {
+            statusHTML += '<li class="empty">' + rooms[i].room;;
+
+        } else {
+            statusHTML += '<li class="full">' + rooms[i].room;
+        }
+        statusHTML += '</li>';
+    }
+    statusHTML += '</ul>';
+    document.getElementById('roomList').innerHTML = statusHTML;
+   }
+};
+meetingRoomsXhr.open('GET', 'data/meeting_room.json');
+meetingRoomsXhr.send();
