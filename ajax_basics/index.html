@@ -29,7 +29,10 @@
         step 4
         send the request
     */
-    xhr.send();
+    function sendAJAX() {
+        xhr.send();
+        document.getElementById('load').style.display = 'none';
+    }
   </script>
 </head>
 <body>
@@ -39,6 +42,7 @@
         <div class="grid-100">
           <div class="heading">
             <h1>Bring on the AJAX</h1>
+            <button id="load" onclick="sendAJAX()">Bring it!</button>
           </div>
           <div id="ajax">
 
