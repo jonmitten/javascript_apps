@@ -4,38 +4,42 @@
   <meta charset="utf-8">
   <link href='//fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <title>AJAX Tutorial</title>
   <script>
     /*
         step 1
         Create the XHR object
     */
-    var xhr = new XMLHttpRequest();
+    // var xhr = new XMLHttpRequest();
     /*
         step 2
         define a callback function
     */
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4){
-            if (xhr.status === 200) {
-                document.getElementById('ajax').innerHTML = xhr.responseText;
-            } else {
-                alert(xhr.statusText);
-            }
-        }
-    };
+    // xhr.onreadystatechange = function() {
+    //     if (xhr.readyState === 4){
+    //         if (xhr.status === 200) {
+    //             document.getElementById('ajax').innerHTML = xhr.responseText;
+    //         } else {
+    //             alert(xhr.statusText);
+    //         }
+    //     }
+    // };
     /*
         step 3
         open the request
     */
-    xhr.open('GET', 'sidebarrr.html');
+    // xhr.open('GET', 'sidebarrr.html');
     /*
         step 4
         send the request
     */
     function sendAJAX() {
-        xhr.send();
-        document.getElementById('load').style.display = 'none';
+        // xhr.send();
+        $('#load').hide();
+        /* Now using jQuery! */
+        // all 4 steps in one line:
+        $('#ajax').load('sidebar.html');
     }
   </script>
 </head>
